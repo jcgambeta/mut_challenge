@@ -7,7 +7,7 @@ from mut_check import is_mut
 load_dotenv()
 db_uri = getenv('DATABASE_URL')
 if db_uri.startswith("postgres://"):
-    uri = db_uri.replace("postgres://", "postgresql://", 1)
+    db_uri = db_uri.replace("postgres://", "postgresql://", 1)
 
 app = Flask(__name__)
 
